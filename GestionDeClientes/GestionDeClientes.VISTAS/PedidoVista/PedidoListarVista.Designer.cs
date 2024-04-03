@@ -34,6 +34,7 @@
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
             label1 = new Label();
+            buttonMostrarPedidoClientes = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -42,9 +43,9 @@
             // 
             buttonEliminar.DialogResult = DialogResult.OK;
             buttonEliminar.Font = new Font("Impact", 16.2F);
-            buttonEliminar.Location = new Point(583, 379);
+            buttonEliminar.Location = new Point(370, 379);
             buttonEliminar.Name = "buttonEliminar";
-            buttonEliminar.Size = new Size(191, 45);
+            buttonEliminar.Size = new Size(144, 45);
             buttonEliminar.TabIndex = 9;
             buttonEliminar.Text = "ELIMINAR";
             buttonEliminar.UseVisualStyleBackColor = true;
@@ -54,9 +55,9 @@
             // 
             buttonEditar.DialogResult = DialogResult.OK;
             buttonEditar.Font = new Font("Impact", 16.2F);
-            buttonEditar.Location = new Point(305, 379);
+            buttonEditar.Location = new Point(179, 379);
             buttonEditar.Name = "buttonEditar";
-            buttonEditar.Size = new Size(191, 45);
+            buttonEditar.Size = new Size(109, 45);
             buttonEditar.TabIndex = 8;
             buttonEditar.Text = "EDITAR";
             buttonEditar.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             buttonInsertar.DialogResult = DialogResult.OK;
             buttonInsertar.Font = new Font("Impact", 16.2F);
-            buttonInsertar.Location = new Point(19, 379);
+            buttonInsertar.Location = new Point(12, 379);
             buttonInsertar.Name = "buttonInsertar";
-            buttonInsertar.Size = new Size(191, 45);
+            buttonInsertar.Size = new Size(137, 45);
             buttonInsertar.TabIndex = 7;
             buttonInsertar.Text = "INSERTAR";
             buttonInsertar.UseVisualStyleBackColor = true;
@@ -83,6 +84,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(800, 306);
             dataGridView1.TabIndex = 6;
             // 
@@ -107,11 +109,24 @@
             label1.Text = "LISTA DE PEDIDOS";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // buttonMostrarPedidoClientes
+            // 
+            buttonMostrarPedidoClientes.DialogResult = DialogResult.OK;
+            buttonMostrarPedidoClientes.Font = new Font("Impact", 16.2F);
+            buttonMostrarPedidoClientes.Location = new Point(541, 379);
+            buttonMostrarPedidoClientes.Name = "buttonMostrarPedidoClientes";
+            buttonMostrarPedidoClientes.Size = new Size(247, 45);
+            buttonMostrarPedidoClientes.TabIndex = 10;
+            buttonMostrarPedidoClientes.Text = "MOSTRAR PEDIDO";
+            buttonMostrarPedidoClientes.UseVisualStyleBackColor = true;
+            buttonMostrarPedidoClientes.Click += buttonMostrarPedidoClientes_Click;
+            // 
             // PedidoListarVista
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonMostrarPedidoClientes);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonEditar);
             Controls.Add(buttonInsertar);
@@ -133,5 +148,6 @@
         private DataGridView dataGridView1;
         private Panel panel1;
         private Label label1;
+        private Button buttonMostrarPedidoClientes;
     }
 }

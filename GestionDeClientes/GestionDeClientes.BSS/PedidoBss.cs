@@ -32,5 +32,13 @@ namespace GestionDeClientes.BSS
         {
             dal.EliminarPedidoDal(id);
         }
+        public DataTable PedidoDatosBss(int id) 
+        {
+            return dal.PedidoDatosDal(id);
+        }
+        public DataTable PedidosMostrarDatosBss(int id)
+        {
+            return dal.PedidoMostrarDatosDal(id);
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace GestionDeClientes.VISTAS.ClienteVista
         {
             PedidoVista.PedidoInsertarVista.IdClienteSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             PedidoVista.PedidoEditarVista.IdClienteSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            PedidoVista.PedidoMostrarVista.IdclienteSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

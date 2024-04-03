@@ -51,8 +51,9 @@ namespace GestionDeClientes.VISTAS.PedidoVista
 
         private void PedidoEditarVista_Load(object sender, EventArgs e)
         {
-            pedido = bsspedido.ObtenerPedidoIdBss(IdClienteSeleccionado);
-            textBox1.Text = pedido.IdCliente.ToString();
+            ///IdClienteSeleccionado = Convert.ToInt32(d)
+            pedido = bsspedido.ObtenerPedidoIdBss(idpedido);
+            textBox1.Text = IdClienteSeleccionado.ToString();
             dateTimePicker1.Value = pedido.Fecha;
             textBox2.Text = pedido.Total.ToString();
             textBox3.Text = pedido.Estado;

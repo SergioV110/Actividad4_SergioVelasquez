@@ -54,5 +54,21 @@ namespace GestionDeClientes.DAL
             string consulta = "delete from pedido where idpedido=" + idpedido;
             conexion.Ejecutar(consulta);
         }
+        public DataTable PedidoDatosDal(int id)
+        {
+            string consulta = "SELECT P.IDCLIENTE, COUNT(P.IDPEDIDO) CANTIDAD_DE_PEDIDOS , SUM (P.TOTAL) MONTO_TOTAL " +
+                "              FROM PEDIDO P " +
+                "              WHERE P.IDCLIENTE =  " + id +
+                "              GROUP BY P.IDCLIENTE ";
+            return conexion.EjecutarDataTabla(consulta, "abe");
+        }
+        public DataTable PedidoMostrarDatosDal(int id)
+        {
+            string consulta = "SELECT PEDIDO.IDPEDIDO, PEDIDO.FECHA, PEDIDO.TOTAL, PEDIDO.ESTADO " +
+                "              FROM CLIENTE" +
+                "                       INNER JOIN PEDIDO ON CLIENTE.IDCLIENTE = PEDIDO.IDCLIENTE" +
+                "              WHERE CLIENTE.IDCLIENTE = " + id;
+            return conexion.EjecutarDataTabla(consulta, "abe");
+        }
     }
 }

@@ -40,3 +40,4 @@ insert into pedido values (5, '2022-05-07 15:30:00', '206', 'Cancelado');
 insert into pedido values (6, '2022-06-04 16:45:00', '190', 'Completado');
 
 SELECT * FROM PEDIDO
+

@@ -54,5 +54,14 @@ namespace GestionDeClientes.VISTAS.PedidoVista
                 dataGridView1.DataSource = bss.ListarPedidoBss();
             }
         }
+
+        private void buttonMostrarPedidoClientes_Click(object sender, EventArgs e)
+        {
+            PedidoMostrarVista fr = new PedidoMostrarVista();
+            if(fr.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }

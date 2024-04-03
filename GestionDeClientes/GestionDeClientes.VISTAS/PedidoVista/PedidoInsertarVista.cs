@@ -15,8 +15,10 @@ namespace GestionDeClientes.VISTAS.PedidoVista
 {
     public partial class PedidoInsertarVista : Form
     {
+        
         public PedidoInsertarVista()
         {
+             
             InitializeComponent();
         }
         
